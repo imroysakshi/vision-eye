@@ -12,7 +12,7 @@ const SignIn = () => {
         >
           <div className="space-y-1 text-sm">
             <label for="username" className="block dark:text-gray-400">
-              Username
+              Name
             </label>
             <input
               type="text"
