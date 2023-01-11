@@ -1,5 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contact from "./pages/Contact";
+import Explore from "./pages/Explore";
+import ForgotPassword from "./pages/ForgotPassword";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 function App() {
-  return <h1>Hello world</h1>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Explore />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
