@@ -1,19 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+import {Link,useNavigate} from "react-router-dom";
+//import { ReactComponent as ArrowRightIcon} from "../assets/svg/keyboardArrowRightIcon.svg";
+//import visibilityIcon from "../assets/svg/visibilityIcon.svg";
+import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
 
 const SignIn = () => {
+  const [formData,setFormData]=useState({
+    email:"",
+    password:"",
+  });
+  const navigate=useNavigate();
+  const [showPassword,setShowPassword]=useState(false);
+  const{email,password}=formData;
+  
+  const handleChange=(e) => {
+    setFormData({...formData,[e.target.id]: e.target.value});
+  };
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+    try{
+      const auth=getAuth();
+      const userCredentials=await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      if(userCredentials.user){
+        navigate("/");
+
+      }
+      }catch(error){
+        console.log(error);
+
+    }
+  };
   return (
     <>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
         <h1 className="text-2xl font-bold text-center">Login</h1>
-        <form action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+        <form onSubmit={handleSubmit} action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
           <div className="space-y-1 text-sm">
             <label for="username" className="block dark:text-gray-400">
               Name
             </label>
             <input
               type="text"
-              name="username"
-              id="username"
+              id="email"
+              value={email}
+              onChange={handleChange}
               placeholder="Username"
               className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
             />
@@ -24,8 +59,9 @@ const SignIn = () => {
             </label>
             <input
               type="password"
-              name="password"
               id="password"
+              value={password}
+              onChange={handleChange}
               placeholder="Password"
               className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
             />
@@ -35,7 +71,7 @@ const SignIn = () => {
               </a>
             </div>
           </div>
-          <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">
+          <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">
             Sign in
           </button>
         </form>
