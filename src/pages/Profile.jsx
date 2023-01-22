@@ -69,6 +69,7 @@ const Profile = () => {
               {changeDetails ? "done" : "change"}
             </p>
           </div>
+
           <div className="profileCard">
             <form>
               <input

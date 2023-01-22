@@ -22,7 +22,7 @@ const ForgotPassword = () => {
 
   return (
     <>
-      <div class="row">
+      {/* <div class="row">
         <h1>Forgot Password</h1>
         <h6 class="information-text">
           Enter your registered email to reset your password.
@@ -57,6 +57,34 @@ const ForgotPassword = () => {
             </span>
           </p>
         </div>
+      </div> */}
+      <div className="pageContainer">
+        <header>
+          <p className="pageHeader">Forgot Password</p>
+        </header>
+
+        <main>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              className="emailInput"
+              placeholder="Email"
+              value={email}
+              onChange={handleChange}
+            />
+
+            <Link className="forgotPasswordLink" to="/sign-in">
+              SignIn
+            </Link>
+
+            <div className="signInBar">
+              <div className="signInText">Send Reset Link</div>
+              <button type="submit" className="signInButton">
+                {/* <ArrowRight fill="#ffffff" width="32px" height="32px" /> */}
+              </button>
+            </div>
+          </form>
+        </main>
       </div>
     </>
   );
