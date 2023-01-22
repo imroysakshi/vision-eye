@@ -20,6 +20,8 @@ const Listing = () => {
   const params = useParams();
   const auth = getAuth();
 
+  console.log(listing);
+
   useEffect(() => {
     const fetchListing = async () => {
       const docRef = doc(db, "listings", params.listingId);
@@ -70,27 +72,25 @@ const Listing = () => {
 
       <div className="listingDetails">
         <p className="listingName">
-          {listing.name} - $
-          {listing.offer
+          {listing.name}
+          {/* {listing.offer
             ? listing.discountedPrice
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             : listing.regularPrice
                 .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
         </p>
         <p className="listingLocation">{listing.location}</p>
         <p className="listingType">
-          For {listing.type === "rent" ? "Rent" : "Sale"}
+          {listing.negotiable ? "Negotiable" : "Not Negotiable"}
         </p>
-        {listing.offer && (
-          <p className="discountPrice">
-            ${listing.regularPrice - listing.discountedPrice} discount
-          </p>
-        )}
+        <p className="discountPrice">
+          {listing.remote ? "Remote Work" : "Office Work"}
+        </p>
 
         <ul className="listingDetailsList">
-          <li>
+          {/* <li>
             {listing.bedrooms > 1
               ? `${listing.bedrooms} Bedrooms`
               : "1 Bedroom"}
@@ -101,7 +101,8 @@ const Listing = () => {
               : "1 Bathrooms"}
           </li>
           <li>{listing.parking && "Parking Spot"}</li>
-          <li>{listing.furnished && "Furnished"}</li>
+          <li>{listing.furnished && "Furnished"}</li> */}
+          <li>Stipend:{listing.stipend}</li>
         </ul>
 
         <p className="listingLocationTitle">Location</p>

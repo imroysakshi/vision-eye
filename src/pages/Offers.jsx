@@ -27,7 +27,7 @@ const Offers = () => {
         // Create a query
         const q = query(
           listingRef,
-          where("offer", "==", true),
+          where("remote", "==", true),
           orderBy("timestamp", "desc"),
           limit(10)
           // limit(2) //For checking
