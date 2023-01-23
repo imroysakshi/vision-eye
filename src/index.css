@@ -85,7 +85,11 @@ button {
   right: 20px;
 }
 
-.pageContainer,
+.pageContainer{
+  background-image: url(/img/img4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .offers,
 .profile,
 .listingDetails,
