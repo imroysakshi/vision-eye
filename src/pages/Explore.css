@@ -11,6 +11,8 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #f5f5f5;
+  background-image: url(/img/logoImg.jpg);
+ 
 }
 
 .header .logo {
@@ -19,6 +21,7 @@ body {
   color: #000;
   text-decoration: none;
   margin-left: 30px;
+  
 }
 
 .nav-items {
