@@ -139,8 +139,11 @@ button {
 }
 
 .pageHeader {
-  font-size: 2rem;
+  font-size:xx-large;
   font-weight: 800;
+  padding: 8vh;
+  margin-left: 10vw;
+  color: #080908;
 }
 
 .navbar {
@@ -192,11 +195,15 @@ button {
 .nameInput {
   margin-bottom: 2rem;
   background: url("./assets/svg/badgeIcon.svg") #ffffff 2.5% center no-repeat;
+  width: 30vw;
+  margin-left: 10vw;
 }
 
 .emailInput {
   margin-bottom: 2rem;
   background: url("./assets/svg/personIcon.svg") #ffffff 2.5% center no-repeat;
+  width: 30vw;
+  margin-left: 10vw;
 }
 
 .passwordInputDiv {
@@ -206,30 +213,35 @@ button {
 .passwordInput {
   margin-bottom: 2rem;
   background: url("./assets/svg/lockIcon.svg") #ffffff 2.5% center no-repeat;
+  width: 30vw;
+  margin-left: 10vw;
 }
 
 .showPassword {
   cursor: pointer;
   position: absolute;
   top: -4%;
-  right: 1%;
+  /* right: 1%; */
+  margin-left: -3vw;
   padding: 1rem;
 }
 
 .forgotPasswordLink {
   cursor: pointer;
-  color: #00cc66;
+  color: #eef7f3;
   font-weight: 600;
-  text-align: right;
+  margin-left: 30vw;
 }
 
 .signInBar,
 .signUpBar {
   margin-top: 3rem;
+  margin-left: 15vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: inherit;
+  color: #ebf6f0;
 }
 
 .signInButton,
@@ -271,17 +283,17 @@ button {
 .socialLogin {
   margin-top: 4rem;
   display: flex;
+  margin-left: 15vw;
   flex-direction: column;
-  align-items: center;
+  color: #ebf6f0;
 }
 
 .socialIconDiv {
   cursor: pointer;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 1vw;
   padding: 0.75rem;
-  margin: 1.5rem;
+  /* margin: 1.5rem; */
   width: 3rem;
   height: 3rem;
   background-color: #ffffff;
@@ -295,11 +307,12 @@ button {
 
 .registerLink {
   /* margin-top: 4rem; */
-  color: #00cc66;
+  color: #f1f4f2;
   font-weight: 600;
-  text-align: center;
-  /* margin-bottom: 7rem; */
-  margin: 8em auto;
+  margin-left: 12vw;
+  margin-bottom: 7vw;
+  /* margin: 8em auto; */
+  padding: 5vh;
 }
 
 @media (min-width: 1217px) {
@@ -457,7 +470,7 @@ button {
   margin-top: 0.5rem;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #00cc66;
+  color: #ebf6f0;
   margin-bottom: 0;
   display: flex;
   align-items: center;
@@ -631,31 +644,42 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #00cc66;
+  background-color: #020906;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
+  margin-left: 40vw;
 }
 
 .profileDetailsHeader {
   display: flex;
   justify-content: space-between;
   max-width: 500px;
+  margin-left: 20vw;
+  font-size:xx-large;
+  font-style: italic;
+  font-style: oblique;
 }
 
 .personalDetailsText {
-  font-weight: 600;
+   font-weight: 600; 
+  /* font-size:xx-large; */
+  padding: 7vh;
+  color:#000000;
 }
 
 .changePersonalDetails {
   cursor: pointer;
   font-weight: 600;
-  color: #00cc66;
+  color: #090a0a;
+  margin-left: 20vw;
 }
 
 .profileCard {
   background-color: #ffffff;
   border-radius: 1rem;
-  padding: 1rem;
+  margin-top: 4vh;
+  margin-left: 20vw;
+  padding: 4vh;
   box-shadow: rgba(0, 0, 0, 0.2);
   max-width: 500px;
 }

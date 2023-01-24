@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Explore />} />
           <Route path="/remote" element={<Offers />} />
@@ -39,7 +40,6 @@ function App() {
           <Route path="/ref" element={<RefComp />} />
           <Route path="/page" element={<Page />} />
         </Routes>
-        <Navbar />
       </BrowserRouter>
       {/* <ToastContainer autoClose={3000} /> */}
     </>

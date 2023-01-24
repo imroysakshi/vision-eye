@@ -8,7 +8,7 @@ const PrivateRoute = () => {
   if (checkingStatus) {
     return <h1>Loading</h1>;
   }
-  return loggedIn ? <Outlet /> : <Navigate to="/signIn" />;
+  return loggedIn ? <Outlet /> : <Navigate to="/sign-in" />;
 };
 
 export default PrivateRoute;

@@ -64,7 +64,7 @@ const SignUp = () => {
     <>
       <div className="pageContainer">
         <header>
-          <p className="pageHeader">Welcome Back!</p>
+          <p className="pageHeader">Welcome!</p>
         </header>
 
         <form onSubmit={handleSubmit}>
@@ -101,9 +101,9 @@ const SignUp = () => {
             />
           </div>
 
-          <Link to="/forgot-password" className="forgotPasswordLink">
+          {/* <Link to="/forgot-password" className="forgotPasswordLink">
             Forgot Password
-          </Link>
+          </Link> */}
 
           <div className="signUpBar">
             <p className="signUpText">Sign Up</p>

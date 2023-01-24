@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Slider from "../components/Slider";
+//import Slider from "../components/Slider";
+import "./Explore.css";
 const Explore = () => {
   return (
     // Slider
@@ -36,38 +37,72 @@ const Explore = () => {
     // </div>
 
     //Harsh Sir
-    <div className="explore">
-      <header>
-        <p className="pageHeader">Explore</p>
-      </header>
+    // <div className="explore">
+    //   <header>
+    //     <p className="pageHeader">Explore</p>
+    //   </header>
 
-      <main>
-        <Slider />
+    //   <main>
+    //     <Slider />
 
-        <p className="exploreCategoryHeading">Categories</p>
+    //     <p className="exploreCategoryHeading">Categories</p>
 
-        <div className="exploreCategories">
-          <Link to="/category/web">
-            {/* <img
+    /*{ <div className="exploreCategories">
+          <Link to="/category/web"> }*/
+    /*{ <img
               src={rentCategoryImage}
               alt="web"
               className="exploreCategoryImg"
-            /> */}
-            <div className="exploreCategoryName">Web</div>
+            /> }*/
+    /*{ <div className="exploreCategoryName">Web</div>
           </Link>
-          <Link to="/category/android">
-            {/* <img
+          <Link to="/category/android"> }*/
+    /*{ <img
               src={sellCategoryImage}
               alt="sell"
               className="exploreCategoryImg"
-            /> */}
-            <div className="exploreCategoryName">Android</div>
+            /> }*/
+    /*{ <div className="exploreCategoryName">Android</div>
           </Link>
         </div>
       </main>
-    </div>
+    </div> }
 
     //w3shools
+    */
+
+    <>
+      <body>
+        <main>
+          <div class="intro">
+            <h1>Vision-Eye</h1>
+            <p>an arena to work...</p>
+          </div>
+          <div class="about-me">
+            <div class="about-me-text">
+              <h2>Categories</h2>
+
+              <Link to="/category/web">
+                <button>Web</button>
+              </Link>
+              <Link to="/category/android">
+                <button>Android</button>
+              </Link>
+              <Link to="/category/cloud-computing">
+                <button>Cloud Computing</button>
+              </Link>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+              alt="me"
+            />
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="copy">© 2022 Developer</div>
+        </footer>
+      </body>
+    </>
   );
 };
 

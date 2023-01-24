@@ -3,9 +3,11 @@ import { ReactComponent as DeleteIcon } from "../assets/svg/deleteIcon.svg";
 import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
 import bedIcon from "../assets/svg/bedIcon.svg";
 import bathtubIcon from "../assets/svg/bathtubIcon.svg";
+import { FaDollarSign } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
 
 const ListingItem = ({ listing, id, onDelete, onEdit }) => {
-  console.log(listing)
+  console.log(listing);
   return (
     <div>
       <li className="categoryListing">
@@ -33,19 +35,21 @@ const ListingItem = ({ listing, id, onDelete, onEdit }) => {
             </p> */}
 
             <div className="categoryListingInfoDiv">
-              <img src={bedIcon} alt="bed" />
+              {/* <img src={bedIcon} alt="bed" /> */}
+              <FaDollarSign />
               <p className="categoryListingInfoText">
                 {/* {listing.bedrooms > 1
                   ? `${listing.bedrooms} Bedrooms`
                   : `1 Bedroom`} */}
-                  {listing.stipend}
+                {listing.stipend}
               </p>
 
-              <img src={bathtubIcon} alt="bathtub" />
               <p className="categoryListingInfoText">
-                {listing.bathrooms > 1
+                {/* {listing.bathrooms > 1
                   ? `${listing.bathrooms} Bathrooms`
-                  : `1 Bathroom`}
+                  : `1 Bathroom`} */}
+                <FaLaptopCode />
+                {listing.skills}
               </p>
             </div>
           </div>

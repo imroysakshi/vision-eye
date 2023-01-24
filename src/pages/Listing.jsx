@@ -90,6 +90,7 @@ const Listing = () => {
         </p>
 
         <ul className="listingDetailsList">
+          <h3>Project Description: </h3>
           {/* <li>
             {listing.bedrooms > 1
               ? `${listing.bedrooms} Bedrooms`
@@ -102,6 +103,7 @@ const Listing = () => {
           </li>
           <li>{listing.parking && "Parking Spot"}</li>
           <li>{listing.furnished && "Furnished"}</li> */}
+          <li>{listing.description}</li>
           <li>Stipend:{listing.stipend}</li>
         </ul>
 
@@ -132,7 +134,7 @@ const Listing = () => {
             to={`/contact/${listing.userRef}?listingName=${listing.name}`}
             className="primaryButton"
           >
-            Contact Landlord
+            Contact Us!
           </Link>
         )}
       </div>

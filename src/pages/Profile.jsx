@@ -58,8 +58,8 @@ const Profile = () => {
         </header>
         <main>
           <div className="profileDetailsHeader">
-            <p className="profileDetailsText">Personal Details</p>
-            <p
+            <div className="profileDetailsText">Personal Details</div>
+            <div
               className="changePersonalDetails"
               onClick={() => {
                 setChangeDetails((prevState) => !prevState);
@@ -67,7 +67,7 @@ const Profile = () => {
               }}
             >
               {changeDetails ? "done" : "change"}
-            </p>
+            </div>
           </div>
 
           <div className="profileCard">

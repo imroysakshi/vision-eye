@@ -102,9 +102,13 @@ const Category = () => {
     <div className="category">
       <header>
         <p className="pageHeader">
-          {params.categoryName === "rent"
-            ? "Places for rent"
-            : "Places for sale"}
+          {/* {params.categoryName === "web"
+            ? "Web Projects"
+            : "Android Projects"} */}
+          {params.categoryName === "web" && "Web Projects"}
+          {params.categoryName === "android" && "Android Projects"}
+          {params.categoryName === "cloud-computing" &&
+            "Cloud Computing Projects"}
         </p>
       </header>
 
