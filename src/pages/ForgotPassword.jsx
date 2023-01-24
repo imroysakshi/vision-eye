@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { toast } from "react-toastify";
+import "./ForgotPassword.css"
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -23,9 +24,9 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="pageContainer">
+    <div className="fpContainer">
       <header>
-        <p className="pageHeader">Forgot Password</p>
+        <p className="fpHeader">Forgot Password</p>
       </header>
 
       <main>
@@ -39,7 +40,7 @@ const ForgotPassword = () => {
             onChange={handleChange}
           />
 
-          <Link to="/sign-in" className="forgotPasswordLink">
+          <Link to="/sign-in" className="fpLink">
             Sign In
           </Link>
 
