@@ -159,6 +159,13 @@ button {
   margin-left: 10vw;
   color:white;
 }
+.profilePageHeader{
+  font-size:xx-large;
+  font-weight: 800;
+  padding: 8vh;
+  margin-left: 10vw;
+  color:rgb(20, 17, 17);
+}
 
 .remotePageHeader {
   font-size:xx-large;

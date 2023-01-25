@@ -4,6 +4,7 @@
 // import { ReactComponent as PersonOutlineIcon } from "../assets/svg/personOutlineIcon.svg";
 import { Link } from "react-router-dom";
 import "../pages/Explore.css";
+import logoImg from "../img/logoImg.jpg";
 // const Navbar = () => {
 //   const navigate = useNavigate();
 //   const location = useLocation();
@@ -80,7 +81,7 @@ const Navbar = () => {
   return (
     <>
       <header class="header">
-        <a href="#" class="logo"></a>
+        <img href={logoImg}></img>
         <nav class="nav-items">
           <Link to="/">Home</Link>
 

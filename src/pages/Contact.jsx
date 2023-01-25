@@ -87,30 +87,28 @@ const Contact = () => {
               </li>
             </ul>
 
-            <hr>
-              <ul class="social-media-list">
-                <li>
-                  <a href="#" target="_blank" class="contact-icon">
-                    <i class="fa fa-github" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" class="contact-icon">
-                    <i class="fa fa-codepen" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" class="contact-icon">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" class="contact-icon">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </li>
-              </ul>
-            </hr>
+            <ul class="social-media-list">
+              <li>
+                <a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-codepen" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
 
             <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
           </div>

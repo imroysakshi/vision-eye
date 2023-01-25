@@ -36,7 +36,7 @@ function App() {
             path="/category/:categoryName/:listingId"
             element={<Listing />}
           />
-          <Route path="/contact/:landlordId" element={<Contact />} />
+          {/* <Route path="/contact/:landlordId" element={<Contact />} /> */}
           <Route path="/ref" element={<RefComp />} />
           <Route path="/page" element={<Page />} />
         </Routes>
