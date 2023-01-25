@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
+//import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { toast } from "react-toastify";
 import "./ForgotPassword.css";
@@ -18,8 +18,10 @@ const ForgotPassword = () => {
       const auth = getAuth();
       await sendPasswordResetEmail(auth, email);
       toast.success("Email has been sent :)");
+      console.log("success");
     } catch (error) {
       toast.error("Could not reset email");
+      console.log(error);
     }
   };
 
@@ -71,7 +73,9 @@ const ForgotPassword = () => {
           <p>
             <label for="username">Email</label>
           </p>
-          <button onSubmit={handleSubmit}>Reset Password</button>
+          <button type="submit" onClick={handleSubmit}>
+            Reset Password
+          </button>
         </div>
         <div class="footer">
           <h5>

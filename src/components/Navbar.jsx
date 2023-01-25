@@ -81,7 +81,7 @@ const Navbar = () => {
   return (
     <>
       <header class="header">
-        <img href={logoImg}></img>
+        <img src={logoImg}></img>
         <nav class="nav-items">
           <Link to="/">Home</Link>
 

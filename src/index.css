@@ -87,7 +87,7 @@ button {
 }
 
 .pageContainer{
-  background-image: url(/img/img4.jpg);
+  background-image: url(./img/img4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -336,7 +336,8 @@ button {
 
 .registerLink {
   /* margin-top: 4rem; */
-  color: #f1f4f2;
+  color: #
+  f1f4f2;
   font-weight: 600;
   margin-left: 12vw;
   margin-bottom: 7vw;
