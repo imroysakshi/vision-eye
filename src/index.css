@@ -59,17 +59,18 @@ button {
 
 .primaryButton {
   cursor: pointer;
-  background: #00cc66;
+  background: #52a3d2;
   border-radius: 1rem;
   padding: 0.85rem 2rem;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 1.25rem;
   width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 15vw;
 }
 
 .removeIcon {
@@ -121,6 +122,19 @@ button {
   align-items: center;
 }
 
+.categoryButton{
+  cursor: pointer;
+  background: #46a0b2;
+  border-radius: 1rem;
+  color: #0b0b0b;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: 80%;
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .loadingSpinner {
   width: 64px;
   height: 64px;
@@ -144,6 +158,14 @@ button {
   padding: 8vh;
   margin-left: 10vw;
   color:white;
+}
+
+.remotePageHeader {
+  font-size:xx-large;
+  font-weight: 800;
+  padding: 8vh;
+  margin-left: 10vw;
+  color:rgb(15, 11, 11);
 }
 
 .navbar {

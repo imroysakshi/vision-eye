@@ -83,13 +83,13 @@ const Explore = () => {
               <h2>Categories</h2>
 
               <Link to="/category/web">
-                <button>Web</button>
+                <button className="categoryButton">Web</button>
               </Link>
               <Link to="/category/android">
-                <button>Android</button>
+                <button className="categoryButton">Android</button>
               </Link>
               <Link to="/category/cloud-computing">
-                <button>Cloud Computing</button>
+                <button className="categoryButton">Cloud Computing</button>
               </Link>
             </div>
             <img

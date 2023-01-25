@@ -87,6 +87,7 @@ const Navbar = () => {
           <Link to="/remote">Remote</Link>
 
           <Link to="/profile">Profile</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
       </header>
     </>

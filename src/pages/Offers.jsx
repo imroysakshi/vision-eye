@@ -99,7 +99,7 @@ const Offers = () => {
   return (
     <div className="category">
       <header>
-        <p className="pageHeader">Remote Jobs</p>
+        <p className="remotePageHeader">Remote Jobs</p>
       </header>
 
       {loading ? (
