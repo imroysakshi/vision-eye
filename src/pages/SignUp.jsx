@@ -107,7 +107,7 @@ const SignUp = () => {
 
           <div className="signUpBar">
             <p className="signUpText">Sign Up</p>
-            <button className="signUpButton">
+            <button type="submit" className="signUpButton">
               <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>
           </div>

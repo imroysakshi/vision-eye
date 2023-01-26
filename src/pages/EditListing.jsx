@@ -19,16 +19,14 @@ const EditListing = () => {
   const [listing, setListing] = useState(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    type: "rent",
+    type: "web",
     name: "",
-    bedrooms: 1,
-    bathrooms: 1,
-    parking: false,
-    furnished: false,
+    negotiable: false,
     address: "",
-    offer: false,
-    regularPrice: 0,
-    discountedPrice: 0,
+    remote: false,
+    stipend: 0,
+    description: "",
+    skills: "",
     images: {},
     latitude: 0,
     longitude: 0,
@@ -37,14 +35,12 @@ const EditListing = () => {
   const {
     type,
     name,
-    bedrooms,
-    bathrooms,
-    parking,
-    furnished,
+    negotiable,
     address,
-    offer,
-    regularPrice,
-    discountedPrice,
+    description,
+    skills,
+    remote,
+    stipend,
     images,
     latitude,
     longitude,
@@ -73,6 +69,7 @@ const EditListing = () => {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setListing(docSnap.data());
+        console.log(docSnap);
         setFormData({ ...docSnap.data(), address: docSnap.data().location });
         setLoading(false);
       } else {
@@ -108,11 +105,11 @@ const EditListing = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    if (discountedPrice >= regularPrice) {
-      setLoading(false);
-      toast.error("Discounted price needs to be less than regular price");
-      return;
-    }
+    // if (discountedPrice >= regularPrice) {
+    //   setLoading(false);
+    //   toast.error("Discounted price needs to be less than regular price");
+    //   return;
+    // }
 
     if (images.length > 6) {
       setLoading(false);
@@ -191,7 +188,7 @@ const EditListing = () => {
     formDataCopy.location = address;
     delete formDataCopy.images;
     delete formDataCopy.address;
-    !formDataCopy.offer && delete formDataCopy.discountedPrice;
+    // !formDataCopy.offer && delete formDataCopy.discountedPrice;
 
     const docRef = await doc(db, "listings", params.listingId);
     await updateDoc(docRef, formDataCopy);
@@ -233,30 +230,30 @@ const EditListing = () => {
   return (
     <div className="profile">
       <header>
-        <p className="pageHeader">Create a Listing</p>
+        <p className="pageHeader">Edit Job Listing</p>
       </header>
 
       <main>
         <form onSubmit={handleSubmit}>
-          <label className="formLabel">Sell / Rent</label>
+          <label className="formLabel">Technology</label>
           <div className="formButtons">
             <button
               type="button"
-              className={type === "sale" ? "formButtonActive" : "formButton"}
+              className={type === "web" ? "formButtonActive" : "formButton"}
               id="type"
-              value="sale"
+              value="web"
               onClick={onMutate}
             >
-              Sell
+              Web
             </button>
             <button
               type="button"
-              className={type === "rent" ? "formButtonActive" : "formButton"}
+              className={type === "android" ? "formButtonActive" : "formButton"}
               id="type"
-              value="rent"
+              value="android"
               onClick={onMutate}
             >
-              Rent
+              Android
             </button>
           </div>
 
@@ -272,7 +269,7 @@ const EditListing = () => {
             required
           />
 
-          <div className="formRooms flex">
+          {/* <div className="formRooms flex">
             <div>
               <label className="formLabel">Bedrooms</label>
               <input
@@ -299,14 +296,14 @@ const EditListing = () => {
                 required
               />
             </div>
-          </div>
+          </div> */}
 
-          <label className="formLabel">Parking spot</label>
+          <label className="formLabel">Negotiable</label>
           <div className="formButtons">
             <button
-              className={parking ? "formButtonActive" : "formButton"}
+              className={negotiable ? "formButtonActive" : "formButton"}
               type="button"
-              id="parking"
+              id="negotiable"
               value={true}
               onClick={onMutate}
               min="1"
@@ -316,10 +313,12 @@ const EditListing = () => {
             </button>
             <button
               className={
-                !parking && parking !== null ? "formButtonActive" : "formButton"
+                !negotiable && negotiable !== null
+                  ? "formButtonActive"
+                  : "formButton"
               }
               type="button"
-              id="parking"
+              id="negotiable"
               value={false}
               onClick={onMutate}
             >
@@ -327,7 +326,7 @@ const EditListing = () => {
             </button>
           </div>
 
-          <label className="formLabel">Furnished</label>
+          {/* <label className="formLabel">Furnished</label>
           <div className="formButtons">
             <button
               className={furnished ? "formButtonActive" : "formButton"}
@@ -351,7 +350,7 @@ const EditListing = () => {
             >
               No
             </button>
-          </div>
+          </div> */}
 
           <label className="formLabel">Address</label>
           <textarea
@@ -360,6 +359,28 @@ const EditListing = () => {
             id="address"
             value={address}
             onChange={onMutate}
+            required
+          />
+
+          <label className="formLabel">Project Description</label>
+          <textarea
+            className="formInputAddress"
+            type="text"
+            id="description"
+            value={description}
+            onChange={onMutate}
+            required
+          />
+
+          <label className="formLabel">Skills Required</label>
+          <input
+            className="formInputName"
+            type="text"
+            id="skills"
+            value={skills}
+            onChange={onMutate}
+            maxLength="400"
+            minLength="10"
             required
           />
 
@@ -390,12 +411,12 @@ const EditListing = () => {
             </div>
           )}
 
-          <label className="formLabel">Offer</label>
+          <label className="formLabel">Remote Work?</label>
           <div className="formButtons">
             <button
-              className={offer ? "formButtonActive" : "formButton"}
+              className={remote ? "formButtonActive" : "formButton"}
               type="button"
-              id="offer"
+              id="remote"
               value={true}
               onClick={onMutate}
             >
@@ -403,10 +424,10 @@ const EditListing = () => {
             </button>
             <button
               className={
-                !offer && offer !== null ? "formButtonActive" : "formButton"
+                !remote && remote !== null ? "formButtonActive" : "formButton"
               }
               type="button"
-              id="offer"
+              id="remote"
               value={false}
               onClick={onMutate}
             >
@@ -414,22 +435,22 @@ const EditListing = () => {
             </button>
           </div>
 
-          <label className="formLabel">Regular Price</label>
+          <label className="formLabel">Stipend</label>
           <div className="formPriceDiv">
             <input
               className="formInputSmall"
-              type="number"
-              id="regularPrice"
-              value={regularPrice}
+              type="text"
+              id="stipend"
+              value={stipend}
               onChange={onMutate}
               min="50"
               max="750000000"
               required
             />
-            {type === "rent" && <p className="formPriceText">$ / Month</p>}
+            <p className="formPriceText">$ / Month</p>
           </div>
 
-          {offer && (
+          {/* {remote && (
             <>
               <label className="formLabel">Discounted Price</label>
               <input
@@ -440,10 +461,10 @@ const EditListing = () => {
                 onChange={onMutate}
                 min="50"
                 max="750000000"
-                required={offer}
+                required={remote}
               />
             </>
-          )}
+          )} */}
 
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
@@ -460,7 +481,7 @@ const EditListing = () => {
             required
           />
           <button type="submit" className="primaryButton createListingButton">
-            Edit Listing
+            Save Changes
           </button>
         </form>
       </main>

@@ -81,7 +81,10 @@ const Navbar = () => {
   return (
     <>
       <header class="header">
-        <img src={logoImg}></img>
+        <Link to="/">
+          <img src={logoImg} className="logoImg" />
+        </Link>
+
         <nav class="nav-items">
           <Link to="/">Home</Link>
 
