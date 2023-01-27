@@ -1,8 +1,10 @@
 import { getAuth, updateProfile } from "firebase/auth";
-import React, { useState } from "react";
-import { doc, updateDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { collection, deleteDoc, doc, getDocs, orderBy, query, updateDoc, where } from "firebase/firestore";
+import { Link, useNavigate } from "react-router-dom";
 import { db } from "../firebase.config";
+import { toast } from "react-toastify";
+import ListingItem from "../components/ListingItem";
 //import { async } from "@firebase/util";
 
 const Profile = () => {
@@ -11,6 +13,9 @@ const Profile = () => {
 
   const auth = getAuth();
   console.log(auth);
+
+  const [loading, setLoading] = useState(true);
+  const [listings, setListings] = useState(null);
 
   //formdata state
   const [formData, setFormData] = useState({
@@ -28,6 +33,46 @@ const Profile = () => {
     auth.signOut();
     navigate("/");
   };
+
+  useEffect(() => {
+    const fetchUserListings = async () => {
+      const listingRef = collection(db, "listings");
+
+      const q = query(
+        listingRef,
+        where("userRef", "==", auth.currentUser.uid),
+        orderBy("timestamp", "desc")
+      );
+      const querySnap = await getDocs(q);
+
+      let listings = [];
+
+      querySnap.forEach((doc) => {
+        return listings.push({
+          id: doc.id,
+          data: doc.data(),
+        });
+      });
+
+      setListings(listings);
+      setLoading(false);
+    };
+
+    fetchUserListings();
+  }, [auth.currentUser.uid]);
+
+  const onDelete = async (listingId) => {
+    if (window.confirm("Are you sure you want to delete?")) {
+      await deleteDoc(doc(db, "listings", listingId));
+      const updatedListings = listings.filter(
+        (listing) => listing.id !== listingId
+      );
+      setListings(updatedListings);
+      toast.success("Successfully deleted listing");
+    }
+  };
+
+  const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -92,6 +137,28 @@ const Profile = () => {
               />
             </form>
           </div>
+          <Link to="/create-listing" className="createListing">
+            <button>
+              <p>Sell or rent your home</p>
+            </button>
+          </Link>
+
+          {!loading && listings.length > 0 && (
+            <>
+              <p className="listingText">Your Listings</p>
+              <ul className="listingsList">
+                {listings.map((listing) => (
+                  <ListingItem
+                    key={listing.id}
+                    listing={listing.data}
+                    id={listing.id}
+                    onDelete={() => onDelete(listing.id)}
+                    onEdit={() => onEdit(listing.id)}
+                  />
+                ))}
+              </ul>
+            </>
+          )}
         </main>
       </div>
     </>

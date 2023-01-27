@@ -5,6 +5,13 @@ body {
   box-sizing: border-box;
 }
 
+.logoImg{
+  object-fit: cover;
+  width: 10rem;
+  height: 7rem;
+  opacity: 0;
+}
+
 /* CSS for header */
 .header {
   display: flex;
