@@ -9,8 +9,10 @@ body {
   object-fit: cover;
   width: 10rem;
   height: 7rem;
-
-  
+  box-sizing:border-box;
+  border-style: solid;
+  border-color:lavender;
+  /* border-radius: 150px;  */
 }
 
 /* CSS for header */
@@ -19,8 +21,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color:rgba(29,136,192.255);
+  /* background-color:rgba(29,136,192.255); */
   /* background-image: url(/img/logoImg.jpg); */
+  background-color:lavender;
+  padding: 2px;
  
 }
 
@@ -37,7 +41,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color:rgba(29,136,192.255);
+  background-color:lavender;
   margin-right: 20px;
 }
 
@@ -124,7 +128,7 @@ body {
 
 .achievements .work .work-text {
   font-size: 15px;
-  color: #585858;
+  color: lavender;
   margin: 10px 0;
 }
 
@@ -133,7 +137,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 40px 80px;
-  border-top: 2px solid #eeeeee;
+  border-top: 2px solid lavender;
 }
 
 .about-me img {

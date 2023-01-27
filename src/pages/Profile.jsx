@@ -1,6 +1,15 @@
 import { getAuth, updateProfile } from "firebase/auth";
 import React, { useEffect, useState } from "react";
-import { collection, deleteDoc, doc, getDocs, orderBy, query, updateDoc, where } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  updateDoc,
+  where,
+} from "firebase/firestore";
 import { Link, useNavigate } from "react-router-dom";
 import { db } from "../firebase.config";
 import { toast } from "react-toastify";
@@ -139,7 +148,7 @@ const Profile = () => {
           </div>
           <Link to="/create-listing" className="createListing">
             <button>
-              <p>Sell or rent your home</p>
+              <p>Add Your Jobs</p>
             </button>
           </Link>
 

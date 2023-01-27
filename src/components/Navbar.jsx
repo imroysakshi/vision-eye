@@ -4,11 +4,12 @@
 // import { ReactComponent as PersonOutlineIcon } from "../assets/svg/personOutlineIcon.svg";
 import { Link } from "react-router-dom";
 import "../pages/Explore.css";
-import logoImg from "../img/logoImg.jpg";
+//import logoImg from "../img/logoImg.jpg";
+import Vision_eyeLogo from "../img/Vision_eyeLogo.jpg";
 import { FaHome } from "react-icons/fa";
-import {FaPodcast} from "react-icons/fa";
-import {FaUserTie} from "react-icons/fa";
-import {FaPhoneSquareAlt} from "react-icons/fa";
+import { FaPodcast } from "react-icons/fa";
+import { FaUserTie } from "react-icons/fa";
+import { FaPhoneSquareAlt } from "react-icons/fa";
 // const Navbar = () => {
 //   const navigate = useNavigate();
 //   const location = useLocation();
@@ -86,17 +87,17 @@ const Navbar = () => {
     <>
       <header class="header">
         <Link to="/">
-          <img src={logoImg} className="logoImg" />
+          <img src={Vision_eyeLogo} className="logoImg" />
         </Link>
 
         <nav class="nav-items">
-          <FaHome/>
+          <FaHome />
           <Link to="/">Home</Link>
-          <FaPodcast/>
+          <FaPodcast />
           <Link to="/remote">Remote</Link>
-           <FaUserTie/>
+          <FaUserTie />
           <Link to="/profile">Profile</Link>
-          <FaPhoneSquareAlt/>
+          <FaPhoneSquareAlt />
           <Link to="/contact">Contact</Link>
         </nav>
       </header>
