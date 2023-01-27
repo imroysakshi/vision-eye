@@ -9,15 +9,17 @@ body {
   object-fit: cover;
   width: 10rem;
   height: 7rem;
+
   
 }
 
 /* CSS for header */
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color:rgba(29,136,192.255);
   /* background-image: url(/img/logoImg.jpg); */
  
 }
@@ -31,19 +33,21 @@ body {
   
 }
 
-.nav-items {
+ .nav-items {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color:rgba(29,136,192.255);
   margin-right: 20px;
 }
 
 .nav-items a {
-  text-decoration: none;
+  text-decoration:none;
   color: #000;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 35px 20px;
-}
+} 
 
 /* CSS for main element */
 .intro {

@@ -16,7 +16,9 @@ body {
 
 a {
   text-decoration: none;
-  display: block;
+  justify-content:space-between;
+  /* display: flex; */
+  flex-direction: row;
   color: #000000;
 }
 
@@ -198,7 +200,7 @@ button {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -206,7 +208,7 @@ button {
   cursor: pointer;
   display: flex;
   list-style: none;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
