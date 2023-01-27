@@ -138,6 +138,7 @@ body {
   align-items: center;
   padding: 40px 80px;
   border-top: 2px solid lavender;
+  background-color: lavender;
 }
 
 .about-me img {
@@ -166,11 +167,12 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #302f49;
-  padding: 40px 80px;
+  padding-bottom: 10vh;
 }
 
 .footer .copy {
   color: #fff;
+  padding-bottom: 10vh;
 }
 
 .bottom-links {

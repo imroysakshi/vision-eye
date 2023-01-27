@@ -99,7 +99,9 @@ const Explore = () => {
           </div>
         </main>
         <footer class="footer">
-          <div class="copy">© 2022 Developer</div>
+          <div class="copy">
+            <h2><i>Vision Eye</i></h2><br/>
+            © 2023 All Rights Reserved.</div>
         </footer>
       </body>
     </>
