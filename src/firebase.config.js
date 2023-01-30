@@ -7,7 +7,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDFg7LoABYUPVk5NdrxNCUyA4TqOdo-AA0",
+  apiKey: process.env.REACT_APP_APIKEY,
   authDomain: "visioneye-e2d0d.firebaseapp.com",
   projectId: "visioneye-e2d0d",
   storageBucket: "visioneye-e2d0d.appspot.com",
