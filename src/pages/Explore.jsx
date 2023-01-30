@@ -76,7 +76,7 @@ const Explore = () => {
         <main>
           <div class="intro">
             <h1>Vision-Eye</h1>
-            <p>platform where the real opportunity emerges...</p>
+            <p>Platform where the real opportunity emerges...</p>
           </div>
           <div class="about-me">
             <div class="about-me-text">
