@@ -80,7 +80,7 @@ const Contact = () => {
                 <i class="fa fa-envelope fa-2x">
                   <span class="contact-text gmail">
                     <a href="mailto:#" title="Send me an email">
-                      hitmeup@gmail.com
+                      connectTome@gmail.com
                     </a>
                   </span>
                 </i>
