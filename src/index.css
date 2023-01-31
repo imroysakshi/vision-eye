@@ -172,7 +172,7 @@ button {
 .remotePageHeader {
   font-size:xx-large;
   font-weight: 800;
-  padding: 8vh;
+  padding: 5vh;
   margin-left: 10vw;
   color:rgb(15, 11, 11);
 }
@@ -312,11 +312,12 @@ button {
 }
 
 .socialLogin {
-  margin-top: 4rem;
+  margin-top: 0.5rem;
   display: flex;
   margin-left: 15vw;
   flex-direction: column;
   color: #ebf6f0;
+  margin-bottom: 3vh;
 }
 
 .socialIconDiv {

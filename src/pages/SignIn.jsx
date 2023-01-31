@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
+import "./SignIn.css";
 import OAuth from "../components/OAuth";
 
 const SignIn = () => {
@@ -46,7 +47,7 @@ const SignIn = () => {
 
   return (
     <>
-      <div className="pageContainer">
+      <div className="pageContainer1">
         <header>
           <p className="pageHeader">Welcome Back!</p>
         </header>
@@ -88,7 +89,9 @@ const SignIn = () => {
             </button>
           </div>
         </form>
-
+        <div className="otherSection">
+          <p>OR</p>
+        </div>
         <OAuth />
 
         <Link to="/sign-up" className="registerLink">

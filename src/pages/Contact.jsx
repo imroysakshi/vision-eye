@@ -68,16 +68,14 @@ const Contact = () => {
 
               <li class="list-item">
                 <i class="fa fa-phone fa-2x">
-                  <span class="contact-text phone">
-                   0621-222383
-                  </span>
+                  <span class="contact-text phone">0621-222383</span>
                 </i>
               </li>
 
               <li class="list-item">
                 <i class="fa fa-envelope fa-2x">
-                  <span class="contact-text gmail" >
-                   visionEyeWorkspace@gmail.com
+                  <span class="contact-text gmail">
+                    visioneyeworkspace@gmail.com
                   </span>
                 </i>
               </li>
@@ -106,7 +104,7 @@ const Contact = () => {
               </li>
             </ul> */}
 
-      <div class="icons">
+            <div class="icons">
               <a href="https://t.co/VBNNTjtw3F" class="icon1 icon--instagram">
                 <i class="ri-instagram-line"></i>
               </a>
