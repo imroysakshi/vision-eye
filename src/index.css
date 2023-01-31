@@ -89,10 +89,28 @@ button {
 }
 
 .pageContainer{
-  background-image: url(./img/img4.jpg);
+  background-image: url(./img/img7.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+.pageContainer1{
+  background-image: url(./img/img10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+.pageContainer2{
+  background-image: url(./img/img9.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
 .offers,
 .profile,
 .listingDetails,
