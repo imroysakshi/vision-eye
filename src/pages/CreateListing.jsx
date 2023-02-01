@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
+import "./CreateListing.css";
 
 const CreateListing = () => {
   // eslint-disable-next-line
@@ -199,7 +200,7 @@ const CreateListing = () => {
   return (
     <div className="profile">
       <header>
-        <p className="pageHeader">Create a Job Listing</p>
+        <p className="pageHeader3">Create a Job Listing</p>
       </header>
 
       <main>

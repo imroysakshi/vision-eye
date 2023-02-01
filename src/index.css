@@ -99,7 +99,8 @@ button {
   background-image: url(./img/img10.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  
+  height: 100vh;
+  width: 700vw;
 }
 
 
@@ -107,7 +108,7 @@ button {
   background-image: url(./img/img9.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
-  
+  height: 100vh;
 }
 
 
@@ -462,11 +463,15 @@ button {
 }
 
 .category {
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
+  background-image: url(./img/img3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .categoryListings {
   padding: 0;
+  margin-left: 5vw;
 }
 
 .categoryListing {
@@ -549,6 +554,7 @@ button {
   border-radius: 1rem;
   opacity: 0.7;
   margin-top: 2rem;
+  /* margin-bottom: 12vh; */
 }
 
 .listingDetails {
@@ -881,10 +887,10 @@ button {
   border-radius: 1rem;
   margin-right: 1rem;
 }
-
+/* 
 .createListingButton {
   margin-top: 5rem;
-}
+} */
 
 .offers {
   margin-bottom: 10rem;
