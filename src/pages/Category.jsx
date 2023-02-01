@@ -110,6 +110,13 @@ const Category = () => {
           {params.categoryName === "android" && "Android Projects"}
           {params.categoryName === "cloud-computing" &&
             "Cloud Computing Projects"}
+          {params.categoryName === "ai" && "AI Projects"}
+          {params.categoryName === "robotics" && "Robotics Projects"}
+          {params.categoryName === "computer graphics" &&
+            "Computer Graphics Projects"}
+          {params.categoryName === "cyber security" &&
+            "Cyber Security Projects"}
+          {params.categoryName === "ux-designing" && "UX  Projects"}
         </p>
       </header>
 

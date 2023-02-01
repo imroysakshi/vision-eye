@@ -13,7 +13,7 @@ import CreateListing from "./pages/CreateListing";
 import EditListing from "./pages/EditListing";
 import Listing from "./pages/Listing";
 import Offers from "./pages/Offers";
-import Page from "./components/Page";
+
 function App() {
   return (
     <>
@@ -38,7 +38,6 @@ function App() {
           />
           {/* <Route path="/contact/:landlordId" element={<Contact />} /> */}
           <Route path="/ref" element={<RefComp />} />
-          <Route path="/page" element={<Page />} />
         </Routes>
       </BrowserRouter>
       {/* <ToastContainer autoClose={3000} /> */}

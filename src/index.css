@@ -533,13 +533,14 @@ button {
 
 .categoryListingInfoDiv {
   display: flex;
-  justify-content: space-between;
-  max-width: 275px;
+  /* justify-content: space-between; */
+  /* max-width: 275px; */
 }
 
 .categoryListingInfoText {
   font-weight: 500;
   font-size: 0.7rem;
+  margin-right: 2vw;
 }
 
 .loadMore {
