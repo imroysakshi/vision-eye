@@ -62,7 +62,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="pageContainer">
+      <div className="pageContainer2">
         <header>
           <p className="pageHeader">Welcome!</p>
         </header>
@@ -112,6 +112,10 @@ const SignUp = () => {
             </button>
           </div>
         </form>
+        <div className="otherSection">
+          <p>OR</p>
+        </div>
+
 
         <OAuth />
 
