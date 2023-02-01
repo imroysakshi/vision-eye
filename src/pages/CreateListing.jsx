@@ -223,7 +223,60 @@ const CreateListing = () => {
               value="android"
               onClick={onMutate}
             >
-              Android
+              Andriod
+            </button>
+            <button
+              type="button"
+              className={type === "ai" ? "formButtonActive" : "formButton"}
+              id="type"
+              value="ai"
+              onClick={onMutate}
+            >
+              Artificial Intelligence
+            </button>
+            <button
+              type="button"
+              className={
+                type === "robotics" ? "formButtonActive" : "formButton"
+              }
+              id="type"
+              value="robotics"
+              onClick={onMutate}
+            >
+              Robotics
+            </button>
+            <button
+              type="button"
+              className={
+                type === "computer-graphics" ? "formButtonActive" : "formButton"
+              }
+              id="type"
+              value="computer-graphics"
+              onClick={onMutate}
+            >
+              Computer Graphics
+            </button>
+            <button
+              type="button"
+              className={
+                type === "cyber-security" ? "formButtonActive" : "formButton"
+              }
+              id="type"
+              value="cyber-security"
+              onClick={onMutate}
+            >
+              Cyber Security
+            </button>
+            <button
+              type="button"
+              className={
+                type === "ux-designing" ? "formButtonActive" : "formButton"
+              }
+              id="type"
+              value="ux-designing"
+              onClick={onMutate}
+            >
+              UX Designer
             </button>
           </div>
 
@@ -235,7 +288,7 @@ const CreateListing = () => {
             value={name}
             onChange={onMutate}
             maxLength="32"
-            minLength="10"
+            minLength="2"
             required
           />
 
@@ -417,7 +470,7 @@ const CreateListing = () => {
               max="750000000"
               required
             />
-            <p className="formPriceText">$ / Month</p>
+            <p className="formPriceText">in Rupees.</p>
           </div>
 
           {/* {remote && (
@@ -450,7 +503,10 @@ const CreateListing = () => {
             multiple
             required
           />
-          <button type="submit" className="primaryButton createListingButton">
+          <button
+            type="submit"
+            className="formButtonActive2 createListingButton"
+          >
             Create Listing
           </button>
         </form>

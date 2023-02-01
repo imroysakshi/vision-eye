@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as DeleteIcon } from "../assets/svg/deleteIcon.svg";
 import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
-import bedIcon from "../assets/svg/bedIcon.svg";
-import bathtubIcon from "../assets/svg/bathtubIcon.svg";
-import { FaDollarSign } from "react-icons/fa";
-import { FaLaptopCode } from "react-icons/fa";
+import { FaRupeeSign } from "react-icons/fa";
+// import { FaLaptopCode } from "react-icons/fa";
 
 const ListingItem = ({ listing, id, onDelete, onEdit }) => {
   console.log(listing);
@@ -36,7 +34,7 @@ const ListingItem = ({ listing, id, onDelete, onEdit }) => {
 
             <div className="categoryListingInfoDiv">
               {/* <img src={bedIcon} alt="bed" /> */}
-              <FaDollarSign />
+              <FaRupeeSign />
               <p className="categoryListingInfoText">
                 {/* {listing.bedrooms > 1
                   ? `${listing.bedrooms} Bedrooms`
@@ -44,13 +42,10 @@ const ListingItem = ({ listing, id, onDelete, onEdit }) => {
                 {listing.stipend}
               </p>
 
-              <p className="categoryListingInfoText">
-                {/* {listing.bathrooms > 1
-                  ? `${listing.bathrooms} Bathrooms`
-                  : `1 Bathroom`} */}
+              {/* { <p className="categoryListingInfoText">
                 <FaLaptopCode />
                 {listing.skills}
-              </p>
+              </p> } */}
             </div>
           </div>
         </Link>

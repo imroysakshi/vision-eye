@@ -101,11 +101,15 @@ const Explore = () => {
               {/* start */}
               <div class="parent">
                 <div class="child1">
-                  <button className="exploreButton">Robotics</button>
+                  <Link to="/category/robotics">
+                    <button className="exploreButton">Robotics</button>
+                  </Link>
                   <Link to="/category/android">
                     <button className="exploreButton">Android</button>
                   </Link>
-                  <button className="exploreButton">AI</button>
+                  <Link to="/category/ai">
+                    <button className="exploreButton">AI</button>
+                  </Link>
                   <Link to="/category/cloud-computing">
                     <button className="exploreButton">Cloud Computing</button>
                   </Link>
@@ -114,9 +118,15 @@ const Explore = () => {
                   <Link to="/category/web">
                     <button className="exploreButton">Web</button>
                   </Link>
-                  <button className="exploreButton">NLP</button>
-                  <button className="exploreButton">Cyber Security</button>
-                  <button className="exploreButton">Computer Graphics</button>
+                  <Link to="/category/ux-designing">
+                    <button className="exploreButton">UX Designing</button>
+                  </Link>
+                  <Link to="/category/cyber-security">
+                    <button className="exploreButton">Cyber Security</button>
+                  </Link>
+                  <Link to="/category/computer-graphics">
+                    <button className="exploreButton">Computer Graphics</button>
+                  </Link>
                 </div>
               </div>
               {/* end */}
