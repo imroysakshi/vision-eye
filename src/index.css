@@ -180,6 +180,14 @@ button {
   margin-left: 10vw;
   color:white;
 }
+
+.pageHeaderCategory{
+  font-size:xx-large;
+  font-weight: 800;
+  padding: 8vh;
+  margin-left: 10vw;
+  color:rgb(8, 8, 8);
+}
 .profilePageHeader{
   font-size:xx-large;
   font-weight: 800;

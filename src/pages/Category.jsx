@@ -102,7 +102,7 @@ const Category = () => {
   return (
     <div className="category">
       <header>
-        <p className="pageHeader">
+        <p className="pageHeaderCategory">
           {/* {params.categoryName === "web"
             ? "Web Projects"
             : "Android Projects"} */}
@@ -112,7 +112,7 @@ const Category = () => {
             "Cloud Computing Projects"}
           {params.categoryName === "ai" && "AI Projects"}
           {params.categoryName === "robotics" && "Robotics Projects"}
-          {params.categoryName === "computer graphics" &&
+          {params.categoryName === "computer-graphics" &&
             "Computer Graphics Projects"}
           {params.categoryName === "cyber security" &&
             "Cyber Security Projects"}
